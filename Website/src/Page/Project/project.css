@@ -1,0 +1,189 @@
+/* Project */
+.section-title h3 {
+  color: var(--main-color);
+}
+
+.project-nav {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  text-align: center;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.project-nav ul {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.project-nav ul li {
+  display: inline-block;
+  margin: 10px;
+  font-size: 2.5rem;
+
+  color: var(--text-color) !important;
+  transition: 0.3s ease;
+}
+
+.project-nav ul li span {
+  padding: 15px 0;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.project-nav ul li.current span {
+  color: var(--main-color);
+  border-bottom: 0.2rem solid var(--main-color);
+  border-radius: 15%;
+}
+.project-nav ul li span:hover,
+.project-nav ul li span:active {
+  color: var(--main-color);
+}
+.portfoliocontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-up 0.3s;
+}
+
+.card__projects {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  padding: 0.2rem;
+  margin-top: 15px;
+  animation: pop-up 0.2s;
+  background-color: transparent;
+  grid-column: span 1; /* Ensure each program item spans one column */
+}
+.card__projects::before {
+  content: "";
+  position: absolute;
+  transform-origin: left;
+  border: transparent;
+  background-color: var(--main-color);
+  top: 20%;
+  right: 0;
+  left: 50%;
+  padding: 5rem;
+  width: 250px;
+  font-size: 2.5rem;
+  border-radius: 15px;
+
+  animation: rotate 2.5s linear infinite;
+}
+
+.card__projects:hover .card__info {
+  transform: translateY(0);
+  padding-bottom: 20px;
+  opacity: 1;
+}
+
+.card__img img {
+  border-radius: 15px;
+  background-color: transparent;
+  width: 100%;
+  background-color: var(--bg-color);
+  display: block;
+  position: sticky;
+}
+
+.card__info {
+  position: absolute;
+  /* top: 45%; */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  transform: translateY(65%);
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  align-items: start;
+}
+
+.card__title {
+  color: var(--text-color);
+  margin-bottom: 10px;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+}
+
+.card-title:hover::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: var(--main-color);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: 0.4s ease-in-out;
+  border-bottom: 0.2rem solid var(--main-color);
+  border-radius: 15%;
+}
+
+.bt__card {
+  position: inline-block;
+  margin: 0;
+  padding: 0.9rem 1.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.3rem;
+  color: var(--second-bg-color) !important;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+.bt__card:focus,
+.bt__card {
+  background: var(--main-color);
+  border: none;
+  outline: none;
+}
+.bt__card :hover {
+  box-shadow: none;
+}
+
+.card-text {
+  padding: 2px 0 2px 0;
+  color: var(--text-color);
+  opacity: 0.8;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.card:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.card:hover .card-title::after {
+  transform: scalex(1);
+}
+
+.card:hover .card-content {
+  transform: translateY(0);
+}
+
+/* End Project */

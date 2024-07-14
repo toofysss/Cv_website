@@ -1,0 +1,122 @@
+/* Home */
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-content {
+  max-width: 60rem;
+}
+.home-img {
+  position: relative;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-right 0.8s;
+}
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.text-animate {
+  animation: fade-left 0.8s;
+  text-align: start;
+}
+.home-content .text-animate h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: transparent;
+  animation: fade-left 0.8s;
+}
+.home-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 4rem;
+  animation: fade-top 0.8s;
+}
+
+.btn {
+  position: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  transition: 0.5s ease;
+  animation: fade-top 0.8s;
+}
+.btn:hover {
+  box-shadow: none;
+}
+
+.home-img img {
+  width: 90%;
+  border-radius: 50%;
+  height: 90%;
+  border: 0.2rem solid var(--main-color);
+}
+.home-img .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: 0.2rem solid var(--bg-color);
+  border-bottom: 0.2rem solid var(--bg-color);
+  border-left: 0.2rem solid var(--main-color);
+  border-right: 0.2rem solid var(--main-color);
+  animation: spinner 8s linear infinite;
+}
+/* End Home */
+
+@media (max-width: 445px) {
+  .home-content h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Home */
+
+  .home-img,
+  .about-img {
+    width: 30rem;
+    height: 30rem;
+  }
+  .home-content p,
+  .about-content p {
+    text-align: justify;
+  }
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 1280px) {
+  .home-content {
+    order: 2;
+    width: auto;
+  }
+  .home-img {
+    order: 1;
+  }
+  .home {
+    justify-content: center;
+  }
+}

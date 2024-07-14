@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: hsl(184, 100%, 50%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", "sans-serif";
+  cursor: default;
+  scrollbar-color: var(--main-color) transparent;
+  scrollbar-width: thin;
+  text-decoration: none !important;
+}
+section {
+  min-height: 100vh !important;
+  padding: 10rem 9%;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  user-select: none;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Animation */
+
+@keyframes spinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(365deg);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* End Animation */

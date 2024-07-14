@@ -1,0 +1,60 @@
+/* experience */
+.experience {
+  padding-bottom: 5rem;
+}
+.experience .experience-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.experience-row .experience-column {
+  flex: 1 1 40rem;
+}
+
+.experience-column .experience-box {
+  border-left: 0.2rem solid var(--main-color);
+  animation: fade-left 0.8s;
+}
+.experience-box .experience-content {
+  position: relative;
+  padding-left: 2rem;
+}
+.experience-box .experience-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--main-color);
+  border-radius: 50%;
+}
+.experience-content .content {
+  position: relative;
+  padding: 1.5rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+  text-align: start;
+}
+
+.experience-content .content .year {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  padding-bottom: 0.5rem;
+}
+.experience-content .content .year i {
+  padding-right: 0.5rem;
+}
+.experience-content .content h3 {
+  font-size: 2rem;
+}
+
+.experience-content .content p {
+  font-size: 1.6rem;
+  padding-top: 0.5rem;
+  opacity: 0.8;
+  text-align: justify;
+}
+
+/* End Experience */
