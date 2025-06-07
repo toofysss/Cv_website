@@ -38,13 +38,13 @@ function Eduction() {
       {!loading && (
         <>
           <div
-            dir={il8n.language == "en" ? "ltr" : "rtl"}
+            dir={il8n.language ==="en" ? "ltr" : "rtl"}
             className="eduction-row"
           >
             <div className="eduction-column">
               {firstHalfData.length > 0 && (
                 <div
-                  dir={il8n.language == "en" ? "ltr" : "rtl"}
+                  dir={il8n.language ==="en" ? "ltr" : "rtl"}
                   className="eduction-box"
                 >
                   {firstHalfData.map((item, index) => (
@@ -54,10 +54,10 @@ function Eduction() {
                           <i className="bx bxs-calendar"></i> {item.year}
                         </div>
                         <h3>
-                          {il8n.language == "en" ? item.Title : item.TitleA}
+                          {il8n.language ==="en" ? item.Title : item.TitleA}
                         </h3>
                         <p>
-                          {il8n.language == "en" ? item.Dscrp : item.DscrpA}
+                          {il8n.language ==="en" ? item.Dscrp : item.DscrpA}
                         </p>
                       </div>
                     </div>
@@ -68,7 +68,7 @@ function Eduction() {
             <div className="eduction-column">
               {secondHalfData.length > 0 && (
                 <div
-                  dir={il8n.language == "en" ? "ltr" : "rtl"}
+                  dir={il8n.language ==="en" ? "ltr" : "rtl"}
                   className="eduction-box"
                 >
                   {secondHalfData.map((item, index) => (
@@ -78,10 +78,10 @@ function Eduction() {
                           <i className="bx bxs-calendar"></i> {item.year}
                         </div>
                         <h3>
-                          {il8n.language == "en" ? item.Title : item.TitleA}
+                          {il8n.language ==="en" ? item.Title : item.TitleA}
                         </h3>
                         <p>
-                          {il8n.language == "en" ? item.Dscrp : item.DscrpA}
+                          {il8n.language ==="en" ? item.Dscrp : item.DscrpA}
                         </p>
                       </div>
                     </div>

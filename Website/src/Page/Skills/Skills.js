@@ -49,9 +49,9 @@ function Skills() {
                 <div className="Skills-column" key={index}>
                   <h2
                     className="title"
-                    dir={il8n.language == "en" ? "ltr" : "rtl"}
+                    dir={il8n.language === "en" ? "ltr" : "rtl"}
                   >
-                    {il8n.language == "en" ? item.Title : item.TitleA}
+                    {il8n.language === "en" ? item.Title : item.TitleA}
                   </h2>
                   <div className="Skills-box">
                     <div className="Skills-content">

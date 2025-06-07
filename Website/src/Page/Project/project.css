@@ -10,6 +10,7 @@
   opacity: 1;
   transition: 0.5s ease;
 }
+
 .project-nav ul {
   margin: 0 auto;
   padding: 0;
@@ -18,6 +19,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 .project-nav ul li {
   display: inline-block;
   margin: 10px;
@@ -32,15 +34,18 @@
   color: var(--text-color);
   cursor: pointer;
 }
+
 .project-nav ul li.current span {
   color: var(--main-color);
   border-bottom: 0.2rem solid var(--main-color);
   border-radius: 15%;
 }
+
 .project-nav ul li span:hover,
 .project-nav ul li span:active {
   color: var(--main-color);
 }
+
 .portfoliocontainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
@@ -61,8 +66,10 @@
   margin-top: 15px;
   animation: pop-up 0.2s;
   background-color: transparent;
-  grid-column: span 1; /* Ensure each program item spans one column */
+  grid-column: span 1;
+  /* Ensure each program item spans one column */
 }
+
 .card__projects::before {
   content: "";
   position: absolute;
@@ -102,18 +109,16 @@
   bottom: 0;
   left: 0;
   padding-left: 20px;
-  background: linear-gradient(
-    hsl(0 0% 0% / 0),
-    hsl(20 0% 0% / 0.3) 20%,
-    hsl(0 0% 0% / 1)
-  );
+  background: linear-gradient(hsl(0 0% 0% / 0),
+      hsl(20 0% 0% / 0.3) 20%,
+      hsl(0 0% 0% / 1));
   transform: translateY(65%);
   transition: 0.6s;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 
-  align-items: start;
+  align-items: flex-start;
 }
 
 .card__title {
@@ -153,12 +158,14 @@
   font-weight: 600;
   transition: 0.5s ease;
 }
+
 .bt__card:focus,
 .bt__card {
   background: var(--main-color);
   border: none;
   outline: none;
 }
+
 .bt__card :hover {
   box-shadow: none;
 }
@@ -173,6 +180,7 @@
   -webkit-box-orient: vertical;
   white-space: normal;
 }
+
 .card:hover {
   transform: scale(1.02);
   opacity: 1;

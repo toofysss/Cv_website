@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6615b212.css",
+    "main.js": "/static/js/main.09569e05.js",
+    "static/media/mega.png": "/static/media/mega.ca21e45c8fb416961206.png",
+    "static/media/logo.jpg": "/static/media/logo.d15b7bc640f7b7e825af.jpg",
+    "static/media/website.png": "/static/media/website.c068ab73b87ecb132a62.png",
+    "static/media/logo.png": "/static/media/logo.e6b29754181726b062cd.png",
+    "static/media/apple-app-store.svg": "/static/media/apple-app-store.42278803196c8497a7a48a23d7c55e66.svg",
+    "static/media/google-play.svg": "/static/media/google-play.71931f4ebc65503acf82e6664ad88389.svg",
+    "index.html": "/index.html",
+    "main.6615b212.css.map": "/static/css/main.6615b212.css.map",
+    "main.09569e05.js.map": "/static/js/main.09569e05.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6615b212.css",
+    "static/js/main.09569e05.js"
+  ]
+}

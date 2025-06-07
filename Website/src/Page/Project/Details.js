@@ -2,12 +2,10 @@ import applestore from "../../Asset/apple-app-store.svg";
 import googlePlay from "../../Asset/google-play.svg";
 import website from "../../Asset/website.png";
 import mega from "../../Asset/mega.png";
-import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import Loading from "../loading/loading";
 import "./details.css";
 function Details() {
-  const [il8n] = useTranslation();
 
   const location = useLocation();
   const { program } = location.state || {};

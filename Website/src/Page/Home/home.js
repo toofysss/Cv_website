@@ -15,8 +15,9 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       const db = getFirestore(app);
-
       const colRef = collection(db, "Home");
+
+    
       const snapshot = await getDocs(colRef);
       const newData = snapshot.docs.map((doc) => ({
         ...doc.data(),
@@ -46,7 +47,7 @@ function Home() {
       {!loading && (
         <>
           <section
-            dir={il8n.language == "en" ? "ltr" : "rtl"}
+            dir={il8n.language === "en" ? "ltr" : "rtl"}
             className="home"
             id="home"
           >

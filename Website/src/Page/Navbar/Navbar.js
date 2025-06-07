@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useMemo,useState, useEffect, useRef } from "react";
 import logo from "../../Asset/logo.png";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
@@ -7,10 +7,18 @@ import "./Navbar.css";
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
   const [selectedLink, setSelectedLink] = useState(null);
   const [t, il8n] = useTranslation();
+
   const dropdownRef = useRef(null);
+  const links = useMemo(() => [
+    { id: "home", label: t("N1") },
+    { id: "eduction", label: t("N3") },
+    { id: "experience", label: t("N4") },
+    { id: "skills", label: t("N5") },
+    { id: "project", label: t("N6") },
+  ], [t]);
+
 
   const handleMenuClick = (event) => {
     event.stopPropagation();
@@ -23,13 +31,6 @@ function Navbar() {
     setMenuOpen(false);
   };
 
-  const links = [
-    { id: "home", label: t("N1") },
-    { id: "eduction", label: t("N3") },
-    { id: "experience", label: t("N4") },
-    { id: "skills", label: t("N5") },
-    { id: "project", label: t("N6") },
-  ];
 
   useEffect(() => {
     const currentPath = location.pathname;
@@ -39,10 +40,9 @@ function Navbar() {
       const linkId = currentPath.split("/")[1];
       setSelectedLink(linkId);
     }
-  }, [location.pathname]);
-
+  }, [location.pathname, links]);
   return (
-    <header dir={il8n.language == "en" ? "ltr" : "rtl"} className="header">
+    <header dir={il8n.language === "en" ? "ltr" : "rtl"} className="header">
       <h1 href="#" className="logo">
         <img src={logo} alt=""></img>
       </h1>
